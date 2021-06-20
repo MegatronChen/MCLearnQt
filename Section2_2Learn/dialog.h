@@ -15,6 +15,15 @@ public:
     Dialog(QWidget *parent = nullptr);
     ~Dialog();
 
+private slots:
+    void on_checkBoxUnder_clicked(bool checked);
+
+    void on_checkBoxItalic_clicked(bool checked);
+
+    void on_checkBoxBold_clicked(bool checked);
+
+    void setTextFontColor();
+
 private:
     Ui::Dialog *ui;
 };
