@@ -9,8 +9,8 @@ class QPerson:public QObject
     Q_CLASSINFO("author","Wang")
     Q_CLASSINFO("company","UPC")
     Q_CLASSINFO("version","1.0.0")
-    Q_PROPERTY(int Age READ Age WRITE setAge NOTIFY AgeChanged)
-    Q_PROPERTY(QString name READ MEMBER m_name)
+    Q_PROPERTY(int age READ age WRITE setAge NOTIFY ageChanged)
+    Q_PROPERTY(QString name MEMBER m_name)
     Q_PROPERTY(int score MEMBER m_score)
 
 private:
@@ -20,6 +20,7 @@ private:
 
 public:
     explicit QPerson(QString fName,QObject *parent=nullptr);
+    //与上面属性定义中的READ特征同名，是同一个函数
     int age();
     void setAge(int value);
     void incAge();
